@@ -41,6 +41,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers'
   gem 'valid_attribute'
+  gem 'pry-rails'
 end
 
 group :development do

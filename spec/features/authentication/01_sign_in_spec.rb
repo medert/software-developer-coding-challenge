@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Sign In', %{
     As an unauthenticated user
-    I want to sign in 
+    I want to sign in
     So that i can post place a bid or list a car
 } do
     # ACCEPTANCE CRITERIA
@@ -11,6 +11,7 @@ feature 'Sign In', %{
     # * If i do not enter email or password, i get an error message
     # * If i specify valid information, i able to access my account
     let(:user){create(:user)}
+  
 
     scenario 'an existing user specifies a valid email and password' do
         visit new_user_session_path
@@ -21,4 +22,4 @@ feature 'Sign In', %{
         expect(page).to have_content("Signed in successfully.")
         expect(page).to have_content("Sign out")
     end
-end 
+end
