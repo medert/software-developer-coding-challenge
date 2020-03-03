@@ -8,16 +8,13 @@ RSpec.describe Auction, type: :model do
         it {should have_valid(:make).when("Subaru") }
         it {should_not have_valid(:make).when("", nil) }  
 
-        it {should have_valid(:model).when("Forester") }
-        it {should_not have_valid(:model).when("", nil) }  
-
-        it {should have_valid(:prod_year).when(2003) }
-        it {should_not have_valid(:prod_year).when("") }  
-
-        it {should have_valid(:salvage).when(true, false) }
-        it {should_not have_valid(:salvage).when("",0,nil) }  
+        it {should have_valid(:end_date).when(01/01/2021) }
+        it {should_not have_valid(:end_date).when("",0,nil) }  
 
         it {should have_valid(:current_price).when(0.0,10.0) }
-        it {should_not have_valid(:init_price).when("", nil, 0, 10) }  
+        it {should_not have_valid(:current_price).when("", nil, 0, 10) } 
+
+        it {should have_valid(:user_id).when(1}
+        it {should_not have_valid(:user_id).when("", nil)
     end 
 end
