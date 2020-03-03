@@ -19,9 +19,11 @@
       <div class="main-left">
         <p><strong><%= link_to  "AUTOBID", root_path %></strong></p>
         <p><%= link_to  "New Auction" %></p>
-        <p><%= link_to  "My Account", new_user_session_path unless user_signed_in? %></p>
+        <p><%= link_to  "Account", new_user_session_path unless user_signed_in? %></p>
         
-        <div class="main-right"><%= yield %></div>
+        <div class="main-right">
+          <%= yield %>
+          </div>
       <div>
     </div>
   </body>

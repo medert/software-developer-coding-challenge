@@ -47,6 +47,9 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'valid_attribute'
   gem 'pry-rails'
+  # Use to refresh views as changes are safed
+  gem 'guard-livereload'
+  gem 'rack-livereload'
 end
 
 group :development do
