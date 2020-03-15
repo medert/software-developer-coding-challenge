@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+    <tbody>
+        <tr>
+           <td>Title:</td>
+           <td><%= @auction.title %></td>
+        </tr>
+        <tr>
+           <td>Car Make:</td>
+           <td><%=  @auction.make %></td>
+        </tr>
+        <tr>
+           <td>Starting bid:</td>
+           <td>$<%= @auction.current_price %></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<%= link_to 'Edit', edit_auction_path(@auction) %> |
+<%= link_to 'Back', auctions_path %>
