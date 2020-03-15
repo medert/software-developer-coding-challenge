@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SoftwareDeveloperCodingChallenge</title>
+    <title>AutoBid</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag 'application',
+      "https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400i,400,700",
+      "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700",
+      "https://fonts.googleapis.com/css?family=Roboto:400,500i,700",
+      media: 'all' %>
   </head>
   <body>
-    <header class="notice">
+
+    <header >
       <%= render 'layouts/alerts' %>
     </header>
-    <%= render 'layouts/navbar' %>
-    <div class="container main">
-      <div class="main-left">
-        <p><strong><%= link_to  "AUTOBID", root_path %></strong></p>
-        <p><%= link_to  "New Auction" %></p>
-        <p><%= link_to  "Account", new_user_session_path unless user_signed_in? %></p>
-        
-        <div class="main-right">
-          <%= yield %>
-          </div>
-      <div>
-    </div>
+    <%= render 'layouts/nav/navbar' %>
+
+
+        <%= yield %>
+    <%= render 'layouts/nav/footer' %>
+    
   </body>
+
 </html>
