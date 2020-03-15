@@ -49,4 +49,20 @@ feature 'Sign up', %{
         expect(page).not_to have_content("Email can't be blank")
         expect(page).not_to have_link("Log in")
     end
+
+    scenario 'password confirmation does not match confirmation' do
+        visit root_path
+        click_link 'Sign up'
+
+        fill_in 'First Name', with: user.first_name
+        fill_in 'Last Name', with: user.last_name
+        fill_in 'Email', with: user.email
+        fill_in 'Password', with: '123PAssword'
+        fill_in 'Password confirmation', with: 'Secret3456'
+
+        click_button 'Sign up'
+
+        expect(page).to have_content("Password confirmation doesn't match Password")
+        expect(page).to_not have_link("Log out")
+    end
 end
