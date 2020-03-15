@@ -20,6 +20,6 @@ feature 'Sign In', %{
         click_button 'Log in'
 
         expect(page).to have_content("Signed in successfully.")
-        expect(page).to have_content("Sign out")
+        expect(page).to have_content("Log out")
     end
 end
