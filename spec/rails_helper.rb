@@ -6,6 +6,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'support/factory_bot'
 require 'support/devise'
+require 'support/helpers/authentication_helper'
 require 'support/database_cleaner'
 require 'shoulda'
 require 'shoulda-matchers'
@@ -67,6 +68,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include AuthenticationHelper
 end
 
 Shoulda::Matchers.configure do |config|
