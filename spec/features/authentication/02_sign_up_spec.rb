@@ -37,13 +37,8 @@ feature 'Sign up', %{
 
     let(:user){build(:user)}
     scenario 'a new user specifies valid name, last name, email and password' do
-        visit new_user_registration_path
-        fill_in 'First Name', with: user.first_name
-        fill_in 'Last Name', with: user.last_name
-        fill_in 'Email', with: user.email
-        fill_in 'Password', with: user.password
-        fill_in 'Password confirmation', with: user.password_confirmation
-        click_button 'Sign up'
+        sign_up_as(user)
+        
         expect(page).to have_content("Welcome! You have signed up successfully.")
         expect(page).to have_link("Log out")
         expect(page).not_to have_content("Email can't be blank")
