@@ -5,7 +5,6 @@ feature 'when visiting homepage' do
         visit root_path
         expect(page).to have_text("Place Your Winning Bid!")
         expect(page).to have_text("Time is precious to be kicking tires all day long.")
-        expect(page).to have_text("Active Auctions")
         expect(page).to have_text("© AutoBid 2020")
     end
     scenario 'user sees links' do
