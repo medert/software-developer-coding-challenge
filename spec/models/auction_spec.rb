@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Auction, type: :model do
     describe 'validations' do
-        it {should have_valid(:title).when("Subaru Forester 03") }
+        it {should have_valid(:title).when("Great Ride") }
         it {should_not have_valid(:title).when("", nil) }  
 
         it {should have_valid(:make).when("Subaru") }
