@@ -9,7 +9,7 @@ feature 'when visiting homepage' do
     end
     scenario 'user sees links' do
         visit root_path
-        expect(page).to have_link('bid now')
+        expect(page).to have_button('bid now')
         expect(page).to have_link('Log in')
         expect(page).to have_link('Sign up')
         expect(page).not_to have_link('Log out')
