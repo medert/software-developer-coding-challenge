@@ -1,32 +1,47 @@
-<p id="notice"><%= notice %></p>
 
-<h1 class="h3">Auctions</h1>
+   <!-- product_list start-->
+    <section class="product_list section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                      <div class="row">
+                        <h2 class="col-10">Active Auctions</h2>
+                        <%= link_to 'New Auction', new_auction_path, class: "col-2 btn_2 flex" %>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product_list_slider owl-carousel">
+                        <div class="single_product_list_slider">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-lg-3 col-sm-6">
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Make</th>
-      <th>Current Bid</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @auctions.each do |auction| %>
-      <tr>
-        <td><%= link_to auction.title, auction%></td>
-        <td><%= link_to auction.make %></td>
-        <td><%= link_to auction.current_price %></td>
-        <td><%= link_to "Edit", edit_auction_path(auction) %></td>
-        <td><%= link_to "Delete", auction, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Auction', new_auction_path %>
+                                   <% @auctions.each do |auction| %>
+                                      <div class="single_product_item">
+                                          <%= link_to image_tag('product/product_1.png', border: 0), auction_path(auction) %>
+                                          <div class="single_product_text">
+                                              <h4><%= auction.title %></h4>
+                                              <h4><%= auction.make %></h4>
+                                              <h3><%= auction.current_price %></h3>
+                                              <% if current_user.id == auction.user_id %>
+                                              <div class="row">
+                                                <div class="col-6"><%= link_to "Edit", edit_auction_path(auction) %></div>
+                                                <div class="col-6"><%= link_to "Delete", auction, method: :delete, data: {confirm: 'Are you sure?'} %> </div>
+                                              </div>
+                                              <% end%>
+                                              <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                          </div>
+                                      </div>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product_list part start-->
