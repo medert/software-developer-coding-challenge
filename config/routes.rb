@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  unauthenticated do
-    root to: 'home#index'
-  end
 
-  authenticated do
-    root to: 'auctions#index'
-  end
+  root to: 'home#index'
 
   devise_for :users
   resources :auctions
