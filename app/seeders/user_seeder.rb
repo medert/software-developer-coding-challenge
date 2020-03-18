@@ -14,6 +14,20 @@ class UserSeeder
       admin: false,
       password: "password",
       password_confirmation: "password",
+    }, {
+      first_name: "Beth",
+      last_name: "CC",
+      email: "BethC@gmail.com",
+      admin: true,
+      password: "password",
+      password_confirmation: "password",
+    }, {
+      first_name: "Tom",
+      last_name: "DD",
+      email: "TomD@gmail.com",
+      admin: false,
+      password: "password",
+      password_confirmation: "password",
     }
   ]
 
