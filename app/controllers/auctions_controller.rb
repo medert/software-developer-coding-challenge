@@ -3,14 +3,15 @@ class AuctionsController < ApplicationController
   before_action :set_auction, only: [:show, :edit, :update, :destroy]
 
   # GET /auctions
-  # GET /auctions.json
   def index
     @auctions = Auction.all
   end
 
   # GET /auctions/1
-  # GET /auctions/1.json
   def show
+    @bid = Bid.new
+    auction_bids = Bid.where(auction_id: set_auction)
+    @bids = auction_bids.order(created_at: :desc)
   end
 
   # GET /auctions/new
@@ -23,54 +24,46 @@ class AuctionsController < ApplicationController
   end
 
   # POST /auctions
-  # POST /auctions.json
   def create
     @auction = Auction.new(auction_params)
     @auction.user_id = current_user.id
-
-    respond_to do |format|
-      if @auction.save
-        format.html { redirect_to @auction, notice: 'Auction was successfully created.' }
-        format.json { render :show, status: :created, location: @auction }
-      else
-        format.html { render :new }
-        format.json { render json: @auction.errors, status: :unprocessable_entity }
-      end
+    set_realized_price
+    if @auction.save
+      redirect_to @auction, notice: 'Auction was successfully created!'
+    else
+      flash[:alert] = @auction.errors.full_messages
+      render 'new'
     end
   end
 
   # PATCH/PUT /auctions/1
-  # PATCH/PUT /auctions/1.json
   def update
-    respond_to do |format|
-      if @auction.update(auction_params)
-        format.html { redirect_to @auction, notice: 'Auction was successfully updated.' }
-        format.json { render :show, status: :ok, location: @auction }
-      else
-        format.html { render :edit }
-        format.json { render json: @auction.errors, status: :unprocessable_entity }
-      end
+    if @auction.update(auction_params)
+      redirect_to @auction, notice: 'Auction was successfully updated!'
+    else
+      render :edit
     end
   end
 
   # DELETE /auctions/1
-  # DELETE /auctions/1.json
   def destroy
     @auction.destroy
-    respond_to do |format|
-      format.html { redirect_to auctions_url, notice: 'Auction was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to auctions_url, notice: 'Auction was successfully destroyed.'
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_auction
-      @auction = Auction.find(params[:id])
+      @auction ||= Auction.find(params[:id])
+    end
+
+    # Assing value to a auction field
+    def set_realized_price
+      @auction.realized_price = @auction.starting_price
     end
 
     # Only allow a list of trusted parameters through.
     def auction_params
-      params.fetch(:auction, {}).permit(:title, :make, :current_price, :user_id)
+      params.fetch(:auction, {}).permit(:title, :make, :starting_price, :image)
     end
 end
