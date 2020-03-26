@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_18_212755) do
+ActiveRecord::Schema.define(version: 2020_03_23_041408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 2020_03_18_212755) do
   create_table "auctions", force: :cascade do |t|
     t.string "title"
     t.string "make"
-    t.float "current_price", default: 10.0
+    t.float "starting_price", default: 10.0
+    t.float "realized_price", default: 0.0
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "image"
   end
 
   create_table "bids", force: :cascade do |t|
