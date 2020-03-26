@@ -1,47 +1,22 @@
 
 // variable scss
 @import "./partials/variables";
-
 @import "bootstrap";
-
 @import "themify-icons";
 @import "animate";
 @import "font_awesome5_webfont";
-
-// mixin scss
 @import "./partials/mixins";
 @import "./partials/extends";
-// default scss
 @import "./partials/common";
-
-// button scss
 @import "./partials/button";
-
-@import "./partials/blog";
-@import "./partials/single_blog";
-// body scss
 @import "./partials/menu";
 @import "./partials/banner";
-@import "./partials/feature_part";
 @import "./partials/product_list";
-@import "./partials/our_offer";
-@import "./partials/best_seller";
-@import "./partials/subscribe_area";
-@import "./partials/client_logo";
 @import "./partials/product";
-@import "./partials/confirmation_part";
-
 @import "./partials/elements";
-@import "./partials/blog_part";
-@import "./partials/contact";
-
-// breadcrumb scss
-@import "./partials/breadcrumb";
-
-// breadcrumb scss
 @import "./partials/footer";
+@import "home";
 
-@import "home"
 
 
 
