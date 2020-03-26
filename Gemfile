@@ -49,6 +49,8 @@ gem 'popper_js'
 gem 'themify-icons-rails', github: 'scratch-soft/themify-icons-rails'
 # Use Animate for views
 gem "animate-rails"
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
 
 
 
@@ -70,6 +72,7 @@ group :development, :test do
   # Use to refresh views as changes are safed
   gem 'guard-livereload'
   gem 'rack-livereload'
+  gem 'rails-controller-testing'
 end
 
 group :development do
