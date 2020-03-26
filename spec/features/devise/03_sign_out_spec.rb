@@ -20,7 +20,6 @@ feature 'Log out', %{
 
   scenario 'unauthenticated user attempts to log out' do
     visit root_path
-
     expect(page).to_not have_link("Log out")
   end
 end
