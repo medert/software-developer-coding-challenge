@@ -3,42 +3,51 @@ class AuctionSeeder
     {
       title: "Great gas saver",
       make: "Toyota",
-      current_price: 30,
+      starting_price: 30,
+      realized_price: 30 + 1,
+      image: Rails.root.join("app/assets/images/auctions/Toyota.jpg").open,
       user_id: 1
     }, {
       title: "Fast and Furious",
       make: "BMW",
-      current_price: 20,
+      starting_price: 20,
+      realized_price: 20 + 1,
+      image: Rails.root.join("app/assets/images/auctions/BMW.jpg").open,
       user_id: 1
-    }, {
-      title: "Off roader",
-      make: "Subaru",
-      current_price: 33,
-      user_id: 2
     }, {
       title: "Working horse",
       make: "Fiat",
-      current_price: 24,
+      starting_price: 24,
+      realized_price: 24 + 1,
+      image: Rails.root.join("app/assets/images/auctions/Fiat.jpg").open,
       user_id: 2
     }, {
       title: "Roadster",
       make: "Chevrolet",
-      current_price: 50,
+      starting_price: 50,
+      realized_price: 50 + 1,
+      image: Rails.root.join("app/assets/images/auctions/Chevrolet.jpg").open,
       user_id: 3
     }, {
       title: "Rolling couch",
       make: "Lincoln",
-      current_price: 10,
+      starting_price: 10,
+      realized_price: 10 + 1,
+      image: Rails.root.join("app/assets/images/auctions/Lincoln.jpg").open,
       user_id: 3
     }, {
       title: "Commuter",
       make: "Nissan",
-      current_price: 13,
+      starting_price: 13,
+      realized_price: 13 + 1,
+      image: Rails.root.join("app/assets/images/auctions/Nissan.jpg").open,
       user_id: 4
     }, {
       title: "Heavy duty monster",
       make: "Ford",
-      current_price: 26,
+      starting_price: 26,
+      realized_price: 26 + 1,
+      image: Rails.root.join("app/assets/images/auctions/Ford.jpg").open,
       user_id: 4
     }
   ]
