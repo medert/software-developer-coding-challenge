@@ -1,22 +1,76 @@
-<p id="notice"><%= notice %></p>
-
-<table>
-    <tbody>
-        <tr>
-           <td>Title:</td>
-           <td><%= @auction.title %></td>
-        </tr>
-        <tr>
-           <td>Car Make:</td>
-           <td><%=  @auction.make %></td>
-        </tr>
-        <tr>
-           <td>Starting bid:</td>
-           <td>$<%= @auction.current_price %></td>
-        </tr>
-
-    </tbody>
-</table>
-
-<%= link_to 'Edit', edit_auction_path(@auction) %> |
-<%= link_to 'Back', auctions_path %>
+<!--::Auction Show part start::-->
+</section>
+  <div class="product_image_area">
+      <div class="container">
+        <div class="row ml-1 justify-content-between">
+          <div class="col-lg-6 col-xl-5">
+            <div class="product_slider_img text-center">
+              <div id="vertical">
+                <%= image_tag @auction.image_url(:thumb).to_s%>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-6">
+            <div class="s_product_text pt-5">
+                <div class="container">
+                  <div class="col-lg-12">
+                    <h2><%= @auction.title %></h2>
+                      <div class="order_box">
+                        <ul class="list">
+                          <li>
+                            <a href="#">Make:
+                              <span class="last"><%= @auction.make %></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Starting Price:
+                              <span class="last">$<%= @auction.starting_price %></span>
+                            </a>
+                          </li>
+                          <% unless @bids.last.nil?%>
+                          <li>
+                            <a href="#">Highest Bid:
+                              <span class="last">$<%= @auction.realized_price %></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Winning Bidder:
+                              <span class="last"><%= @bids.last.user.first_name + " " + @bids.last.user.last_name%></span>
+                            </a>
+                          </li>
+                          <li>
+                          <%end%>
+                          <% if current_user.id == @auction.user_id%>
+                          <li>
+                            <div class="row">
+                              <div class="col-5"><%= button_to "Edit", edit_auction_path(@auction), method: :get, class: "genric-btn primary-border small" %></div>
+                              <div class="col-5"><%= button_to "Delete", @auction, method: :delete, data: {confirm: 'Are you sure?'}, class: "genric-btn primary-border small" %> </div>
+                            </div>
+                          </li>
+                          <% end %>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product_image_area">
+      <div class="container">
+        <div class="s_product_text">
+          <div class="m-1">
+            <% if current_user.id != @auction.user_id %>
+              <%= render 'bids/form', bid: @bid, auction: @auction%>
+            <% end %>
+          </div>
+          <%= render 'bids/bids'%>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--::Auction Show part end::-->
