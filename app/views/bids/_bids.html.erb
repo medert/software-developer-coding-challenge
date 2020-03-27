@@ -1,0 +1,32 @@
+
+<!--::Bids part start::-->
+  <section>
+    <div class="container">
+      <div class=" cart_inner">
+          <div class="section-top-border">
+            <h3 class="mb-30">Bidding History</h3>
+              <div class="progress-table-wrap">
+                <div class="progress-table">
+                  <div class="table-head">
+                    <div class="serial">#</div>
+                    <div class="country">Bids</div>
+                    <div class="visit">Bidder</div>
+                    <div class="percentage">Email</div>
+                  </div>
+                  <% @bids.each_with_index do |bid,index| %>
+                  <div class="table-row">
+                    <div class="serial"><%= index + 1 %></div>
+                    <div class="country">$<%= bid.amount %></div>
+                    <div class="visit"><%= bid.user.first_name + " " + bid.user.last_name %></div>
+                    <div class="visit"><%= bid.user.email %></div>
+                  </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--::Bids part end::-->

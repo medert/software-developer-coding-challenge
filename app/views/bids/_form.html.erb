@@ -1,0 +1,14 @@
+  <%= form_with(model: [auction, bid], local: true) do |form| %>
+    <%= render "layouts/nav/validation", item: @bid%>
+
+    <div class="card_area d-flex justify-content-between align-items-center">
+    <%= form.label 'Amount'%>
+      <div class="product_count">
+        <%= form.text_field :amount, class: 'input-number', type: 'text', id: "Amount", value: auction.realized_price + 3 %>
+      </div>
+
+      <%= form.submit 'Place Your Bid', class: 'btn_3 bt-block btn-success' %>
+
+    </div>
+  <% end %>
+
