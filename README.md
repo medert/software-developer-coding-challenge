@@ -1,4 +1,3 @@
-[![Coverage Status](https://coveralls.io/repos/medert/software-developer-coding-challenge/badge.svg?branch=master&service=github)]
 
 # Software Developer Coding Challenge
 
