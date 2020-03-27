@@ -1,5 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/medert/software-developer-coding-challenge/badge.svg?branch=master)](https://coveralls.io/github/medert/software-developer-coding-challenge?branch=master)
 
+[![Build Status](https://travis-ci.org/medert/software-developer-coding-challenge.svg?branch=master)](https://travis-ci.org/medert/software-developer-coding-challenge)
+
 # Software Developer Coding Challenge
 
 This is a coding challenge for software developer applicants applying through http://work.traderev.com/

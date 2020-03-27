@@ -2,11 +2,8 @@ language: ruby
 
 sudo: false
 
-cache: bundler
-
 ruby:
   - 2.6
-  - ruby-head
 
 
 script:
