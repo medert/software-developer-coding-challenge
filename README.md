@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/medert/software-developer-coding-challenge/badge.svg?branch=master&service=github)]
+
 # Software Developer Coding Challenge
 
 This is a coding challenge for software developer applicants applying through http://work.traderev.com/
