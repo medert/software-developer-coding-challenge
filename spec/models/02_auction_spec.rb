@@ -9,7 +9,7 @@ RSpec.describe Auction, type: :model do
     it {should belong_to(:user)}
   end
 
-  describe 'validations' do
+  describe 'should validate' do
     it {should have_valid(:title).when("Great Ride") }
     it {should_not have_valid(:title).when("", nil) }
 
@@ -24,5 +24,22 @@ RSpec.describe Auction, type: :model do
 
     it {should have_valid(:user_id).when(1) }
     it {should_not have_valid(:user_id).when("", nil) }
+  end
+
+  let(:user){create(:user)}
+  before {login_as(user)}
+  
+  it "has none to begin with" do
+    expect(Auction.count).to eq(0)
+  end
+
+  it "has one after adding one" do
+    Auction.create(title: "Great car", make: "Subaru", starting_price: 10, image: nil, user_id: user.id)
+
+    expect(Auction.count).to eq(1)
+  end
+
+  it "has none after one was created in a previous example" do
+    expect(Auction.count).to eq(0)
   end
 end
