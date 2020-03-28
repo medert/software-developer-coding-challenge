@@ -1,6 +1,6 @@
-[![Coverage Status](https://coveralls.io/repos/github/medert/software-developer-coding-challenge/badge.svg?branch=master)](https://coveralls.io/github/medert/software-developer-coding-challenge?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/medert/software-developer-coding-challenge/badge.svg?branch=master)](https://coveralls.io/github/medert/software-developer-coding-challenge?branch=master&service=github)[![Build Status](https://travis-ci.org/medert/software-developer-coding-challenge.svg?branch=master)](https://travis-ci.org/medert/software-developer-coding-challenge)
 
-[![Build Status](https://travis-ci.org/medert/software-developer-coding-challenge.svg?branch=master)](https://travis-ci.org/medert/software-developer-coding-challenge)
+
 
 # Software Developer Coding Challenge
 
