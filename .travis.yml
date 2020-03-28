@@ -5,17 +5,18 @@ rvm: 2.6.5
 dist: trusty
 
 before_install:
-- yes | gem update --system --force
-- gem install bundler
+  - yes | gem update --system --force
+  - gem install bundler
 
 addons:
   postgresql: 9.6
   chrome: stable
 
 script:
-— rails db:create
-— rails db:migrate
-— rspec
+- "bundle install"
+— "rails db:create"
+— "rails db:migrate"
+— "rspec"
 
 after_success:
 - CI=true TRAVIS=true coveralls --verbose
