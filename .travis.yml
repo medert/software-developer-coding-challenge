@@ -12,7 +12,11 @@ addons:
   postgresql: 9.6
   chrome: stable
 
-
+script:
+— bundle install
+— rails db:create
+— rails db:migrate
+— rspec
 
 after_success:
 - CI=true TRAVIS=true coveralls --verbose
