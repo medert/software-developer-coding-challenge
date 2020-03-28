@@ -4,6 +4,9 @@ rvm: 2.6.5
 
 dist: trusty
 
+before_install:
+- gem update bundler
+
 addons:
   postgresql: 9.6
   chrome: stable
