@@ -13,7 +13,6 @@ addons:
   chrome: stable
 
 script:
-— bundle install
 — rails db:create
 — rails db:migrate
 — rspec
