@@ -1,10 +1,7 @@
 language: ruby
 
-sudo: false
-
 ruby:
   - 2.6.5
-
 
 script:
  — bundle install
