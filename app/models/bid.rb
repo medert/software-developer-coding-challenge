@@ -1,4 +1,5 @@
 class Bid < ApplicationRecord
+  auction = Auction.new
   belongs_to :auction
   belongs_to :user
 
