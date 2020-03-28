@@ -1,7 +1,12 @@
-language: ruby
 
-ruby:
-  - 2.6.5
+language: ruby
+rvm: 2.6.5
+
+dist: trusty
+
+addons:
+  postgresql: 9.6
+  chrome: stable
 
 script:
  — bundle install
