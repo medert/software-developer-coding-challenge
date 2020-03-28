@@ -11,10 +11,16 @@ addons:
   chrome: stable
 
 script:
-  - "bundle install"
-  — "rails db:create"
-  — "rails db:migrate"
-  — "rspec"
+  - bundle install
+
+script:
+  - rails db:create
+
+script:
+  - rails db:migrate
+
+script:
+  - rspec
 
 after_success:
 - CI=true TRAVIS=true coveralls --verbose
