@@ -1,26 +1,14 @@
-
 language: ruby
-rvm: 2.6.5
+rvm:
+- 2.6.5
 
-before_install:
-  - yes | gem update --system --force
-  - gem install bundler
-
+bundler_args: --jobs=2
+script:
+script:
+  - bundle exec rake db:setup
+  - bundle exec rake spec
+cache: bundler
+services:
+  - postgresql
 addons:
-  postgresql: 9.6
-  chrome: stable
-
-script:
-  - bundle install
-
-script:
-  - rails db:create
-
-script:
-  - rails db:migrate
-
-script:
-  - rspec
-
-after_success:
-- CI=true TRAVIS=true coveralls --verbose
+  postgresql: "9.6"
