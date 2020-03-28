@@ -257,12 +257,6 @@
         null,
         null
       ],
-      "/Users/Meder/Desktop/TradeRev/software-developer-coding-challenge/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/Meder/Desktop/TradeRev/software-developer-coding-challenge/app/seeders/auction_seeder.rb": [
         0,
         0,
@@ -375,20 +369,8 @@
       "/Users/Meder/Desktop/TradeRev/software-developer-coding-challenge/app/jobs/application_job.rb": [
         0,
         0
-      ],
-      "/Users/Meder/Desktop/TradeRev/software-developer-coding-challenge/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/Meder/Desktop/TradeRev/software-developer-coding-challenge/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1585422117
+    "timestamp": 1585428423
   }
 }
