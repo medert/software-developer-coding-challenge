@@ -12,7 +12,10 @@ addons:
   chrome: stable
 
 script:
- — bundle install
- — bundle exec rails db:create
- — bundle exec rails db:migrate
- — bundle exec rspec
+— bundle install
+— bundle exec rake db:create
+— bundle exec rake db:migrate
+— bundle exec rspec
+
+after_success:
+- CI=true TRAVIS=true coveralls --verbose
