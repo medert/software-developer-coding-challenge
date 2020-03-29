@@ -17,16 +17,15 @@ Autobid is a auto auction website hosted at https://autobidtoronto.herojuapp.com
 
 ## Getting started
 
-      Install [bundle](http://bundler.io/)
+Install [bundle](http://bundler.io/)
 
       https://github.com/medert/software-developer-coding-challenge.git
       cd software-developer-coding-challenge
       bundle install
 
-      Install [Postgres app](https://postgresapp.com)
+Install [Postgres app](https://postgresapp.com)
 
       rails db:setup
-
       rails s
 
 
@@ -37,7 +36,7 @@ Autobid is a auto auction website hosted at https://autobidtoronto.herojuapp.com
 - Rails (5.2.4.2)
 - PostgreSQL (vesion 9.6.16)
 - Bootstrap
-- Boostrap Theme - Aranoz(https://colorlib.com/wp/template/aranoz/)
+- Front-end Theme - Aranoz(https://colorlib.com/wp/template/aranoz/)
 - Devise
 - Carrierwave
 
