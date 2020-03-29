@@ -15,16 +15,31 @@ Autobid is a auto auction website hosted at https://autobidtoronto.herojuapp.com
 - [ ] Get the current winning bid for a car
 - [ ] Get a car's bidding history
 
+## Getting started
+
+      Install [bundle](http://bundler.io/)
+
+      https://github.com/medert/software-developer-coding-challenge.git
+      cd software-developer-coding-challenge
+      bundle install
+
+      Install [Postgres app](https://postgresapp.com)
+
+      rails db:setup
+
+      rails s
+
+
+
 ## Development
 
-The project was developed on Ruby on Rails.
-
-Also used during the application development:
+- Ruby (version 2.6.5)
+- Rails (5.2.4.2)
+- PostgreSQL (vesion 9.6.16)
 - Bootstrap
 - Boostrap Theme - Aranoz(https://colorlib.com/wp/template/aranoz/)
 - Devise
 - Carrierwave
--
 
 ## Testing
 
