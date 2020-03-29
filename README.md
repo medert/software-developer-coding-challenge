@@ -76,3 +76,7 @@ You may specify an individual test file to run using rspec:
 For example:
 
     rspec spec/features/01_users_controller_spec.rb
+
+## ER Diagram
+
+  ![](./Autobid_ER_Diagram.png)
