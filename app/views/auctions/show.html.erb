@@ -43,8 +43,8 @@
                           <% if current_user.id == @auction.user_id%>
                           <li>
                             <div class="row">
-                              <div class="col-5"><%= button_to "Edit", edit_auction_path(@auction), method: :get, class: "genric-btn primary-border small" %></div>
-                              <div class="col-5"><%= button_to "Delete", @auction, method: :delete, data: {confirm: 'Are you sure?'}, class: "genric-btn primary-border small" %> </div>
+                              <div class="col-5 d-flex justify-content-center"><%= button_to "Edit", edit_auction_path(@auction), method: :get, class: "genric-btn primary-border small" %></div>
+                              <div class="col-5 d-flex justify-content-center"><%= button_to "Delete", @auction, method: :delete, data: {confirm: 'Are you sure?'}, class: "genric-btn primary-border small" %> </div>
                             </div>
                           </li>
                           <% end %>
