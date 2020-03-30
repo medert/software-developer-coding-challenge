@@ -51,6 +51,8 @@ gem 'themify-icons-rails', github: 'scratch-soft/themify-icons-rails'
 gem "animate-rails"
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
+gem 'fog-aws'
+
 
 group :development, :test do
   gem 'dotenv-rails'
