@@ -8,7 +8,9 @@ Autobid is a auto auction website hosted at https://autobidtoronto.herojuapp.com
 ## Features
 
 - [ ] Create new auction.
-- [ ] Place a bid on auction
+- [ ] Edit new auction.
+- [ ] Destroy new auction.
+- [ ] Place a bid on auction.
 - [ ] Upload image of a car to the auction.
 - [ ] Sign up and authenticate users.
 - [ ] Record user's bid on a car
@@ -28,6 +30,10 @@ Install [Postgres app](https://postgresapp.com)
       rails db:setup
       rails s
 
+### Use user names below for test-drive
+
+- Login: Anne.Backer@gmail.com, Pass: password
+- Login: John.Doe@gmail.com, Pass: password
 
 
 ## Development
