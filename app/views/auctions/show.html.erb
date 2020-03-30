@@ -35,7 +35,7 @@
                           </li>
                           <li>
                             <a href="#">Winning Bidder:
-                              <span class="last"><%= @bids.last.user.first_name + " " + @bids.last.user.last_name%></span>
+                              <span class="last"><%= @auction.bids.max_by{|e| e.amount }.user.first_name + " " + @auction.bids.max_by{|e| e.amount }.user.last_name%></span>
                             </a>
                           </li>
                           <li>
