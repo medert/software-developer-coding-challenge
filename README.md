@@ -1,6 +1,8 @@
-# Software Developer Coding Challenge
+## Software Developer Coding Challenge
 
 Autobid is a auto auction website hosted at https://autobidtoronto.herokuapp.com.
+
+## App Status
 
 [![Coverage Status](https://coveralls.io/repos/github/medert/software-developer-coding-challenge/badge.svg?branch=master)](https://coveralls.io/github/medert/software-developer-coding-challenge?branch=master)[![Build Status](https://travis-ci.org/medert/software-developer-coding-challenge.svg?branch=master)](https://travis-ci.org/medert/software-developer-coding-challenge)
 
@@ -17,11 +19,11 @@ Autobid is a auto auction website hosted at https://autobidtoronto.herokuapp.com
 - [ ] Get the current winning bid for a car
 - [ ] Get a car's bidding history
 
-## Getting started
+## Getting Started
 
 Install [bundle](http://bundler.io/)
 
-      https://github.com/medert/software-developer-coding-challenge.git
+      git clone https://github.com/medert/software-developer-coding-challenge.git
       cd software-developer-coding-challenge
       bundle install
 
